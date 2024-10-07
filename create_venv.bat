@@ -36,6 +36,6 @@ if exist requirements.txt (
     echo Fichier requirements.txt non trouvé.
 )
 
-echo Environnement configuré avec succès.
+echo Environnement configure avec succes.
 
 endlocal

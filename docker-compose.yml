@@ -1,0 +1,24 @@
+services:
+  tensorflow:
+    image: tensorflow/tensorflow:latest-gpu-jupyter
+    command: >
+      sh -c "python3 -m pip install --upgrade pip
+      && pip install -r /tf/ProjetDeepLearning/requirements.txt
+      && jupyter notebook --notebook-dir=/tf --ip 0.0.0.0 --no-browser --allow-root"
+    container_name: tensorflow
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+    ports:
+      - "8888:8888"
+      - "6006:6006"
+    volumes:
+      - .:/tf/ProjetDeepLearning
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+        limits:
+          memory: 20g
