@@ -4,7 +4,7 @@ services:
     command: >
       sh -c "python3 -m pip install --upgrade pip
       && pip install -r /tf/ProjetDeepLearning/requirements.txt
-      && jupyter notebook --notebook-dir=/tf --ip 0.0.0.0 --no-browser --allow-root"
+      && jupyter notebook --notebook-dir=/tf/ProjetDeepLearning --ip 0.0.0.0 --no-browser --allow-root --NotebookApp.token=''"
     container_name: tensorflow
     runtime: nvidia
     environment:
