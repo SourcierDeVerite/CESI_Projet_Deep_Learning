@@ -31,11 +31,11 @@ Pour exécuter le projet localement avec un environnement virtuel, suivez ces é
 
    - Sur **Windows**, exécutez le script `create_venv.bat` :
      ```bash
-     .\scripts\create_venv.bat
+     .\create_venv.bat
      ```
    - Sur **Linux/Mac**, exécutez le script `create_venv.sh` :
      ```bash
-     ./scripts/create_venv.sh
+     ./create_venv.sh
      ```
 
 3. Activez l'environnement virtuel :
