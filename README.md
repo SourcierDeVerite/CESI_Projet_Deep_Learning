@@ -78,7 +78,7 @@ Pour exécuter le projet localement avec un environnement virtuel, suivez ces é
 
 ## Structure du projet
 
-- `notebooks/` : Contient les notebooks Jupyter pour l'entraînement des modèles.
+- `livrable_1/` : Contient les fichiers du livrable 1.
 - `scripts/` : Contient les scripts pour créer et activer l'environnement virtuel (`create_venv.bat` et `create_venv.sh`).
 - `docker-compose.yml` : Fichier Docker Compose pour configurer le projet en utilisant le GPU.
 
