@@ -6,7 +6,7 @@ Ce projet utilise des notebooks Jupyter pour expérimenter et entraîner des mod
 ## Prérequis
 
 ### Option 1: Exécution Locale (sans Docker)
-- **Python 3.x** installé
+- **Python 3.12** installé
 - **Jupyter Notebook** (sera installé dans l'environnement virtuel)
 - **TensorFlow** (sera installé dans l'environnement virtuel)
 
@@ -23,19 +23,19 @@ Pour exécuter le projet localement avec un environnement virtuel, suivez ces é
 
 1. Clonez ce dépôt :
     ```bash
-    git clone https://github.com/votre-depot.git
-    cd votre-depot
+    git clone https://github.com/SourcierDeVerite/ProjetDeepLearning.git
+    cd ProjetDeepLearning
     ```
 
 2. Créez et activez l'environnement virtuel :
 
    - Sur **Windows**, exécutez le script `create_venv.bat` :
      ```bash
-     .\create_venv.bat
+     .\scripts\create_venv.bat
      ```
    - Sur **Linux/Mac**, exécutez le script `create_venv.sh` :
      ```bash
-     ./create_venv.sh
+     .\scripts\create_venv.sh
      ```
 
 3. Activez l'environnement virtuel :
@@ -62,7 +62,7 @@ Pour exécuter le projet localement avec un environnement virtuel, suivez ces é
 
 1. Clonez ce dépôt :
     ```bash
-    git clone https://github.com/votre-depot.git
+    git clone https://github.com/SourcierDeVerite/ProjetDeepLearning.git
     cd votre-depot
     ```
 
@@ -71,12 +71,7 @@ Pour exécuter le projet localement avec un environnement virtuel, suivez ces é
     docker-compose up --build
     ```
 
-3. Si vous avez un GPU NVIDIA et souhaitez l'utiliser avec TensorFlow, vérifiez que le conteneur Docker détecte bien le GPU :
-    ```bash
-    docker-compose -f docker-compose.gpu.yml up --build
-    ```
-
-4. Une fois que les conteneurs sont lancés, ouvrez Jupyter Notebook dans votre navigateur à l'adresse suivante :
+3. Une fois que les conteneurs sont lancés, ouvrez Jupyter Notebook dans votre navigateur à l'adresse suivante :
     ```
     http://localhost:8888
     ```
@@ -85,18 +80,8 @@ Pour exécuter le projet localement avec un environnement virtuel, suivez ces é
 
 - `notebooks/` : Contient les notebooks Jupyter pour l'entraînement des modèles.
 - `scripts/` : Contient les scripts pour créer et activer l'environnement virtuel (`create_venv.bat` et `create_venv.sh`).
-- `Dockerfile` : Définit l'image Docker pour exécuter le projet.
-- `docker-compose.yml` : Fichier Docker Compose pour configurer le projet sans GPU.
-- `docker-compose.gpu.yml` : Fichier Docker Compose pour configurer le projet avec un GPU.
+- `docker-compose.yml` : Fichier Docker Compose pour configurer le projet en utilisant le GPU.
 
-## Remarques
-
-- **TensorFlow avec GPU** : Si vous utilisez Docker avec un GPU NVIDIA, assurez-vous d'avoir installé le **NVIDIA Docker Toolkit**.
-- **Exécution locale** : Si vous ne souhaitez pas utiliser Docker, l'exécution locale avec l'environnement virtuel est aussi possible, bien que moins performante pour l'entraînement de modèles lourds.
-
-## Contributions
-
-N'hésitez pas à soumettre des pull requests ou à ouvrir des issues si vous avez des suggestions ou des problèmes.
 
 ## Licence
 
