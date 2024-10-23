@@ -1,4 +1,6 @@
 services:
+  # WARNING: This container requires a GPU to run. If you don't have a GPU,
+  # you can run jupyter without container
   tensorflow:
     image: tensorflow/tensorflow:latest-gpu-jupyter
     command: >
